@@ -1,0 +1,114 @@
+{
+  "name": "teespace-note-app",
+  "version": "0.1.1",
+  "private": true,
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist/*"
+  ],
+  "dependencies": {
+    "@craco/craco": "^5.6.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "antd": "^4.6.3",
+    "autobind-decorator": "^2.4.0",
+    "axios": "^0.20.0",
+    "craco-less": "^1.17.0",
+    "mobx": "^5.15.6",
+    "mobx-react": "^6.3.0",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "styled-components": "^5.1.1",
+    "teespace-core": "git+http://192.168.158.12:9000/teespace/teespace-core#develop",
+    "jodit": "git+http://192.168.158.12:9000/teespace/jodit#jodit_develop",
+    "jodit-react": "git+https://github.com/s2ksh77/jodit-react.git#master"
+  },
+  "peerDependencies": {
+    "antd": "^4.6.3",
+    "axios": "^0.20.0",
+    "mobx": "^5.15.6",
+    "mobx-react": "^6.3.0",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "styled-components": "^5.1.1",
+    "teespace-core": "git+ssh//git@192.168.158.12:teespace/teespace-core#develop",
+    "jodit": "git+http://192.168.158.12:9000/teespace/jodit#jodit_develop",
+    "jodit-react": "git+https://github.com/s2ksh77/jodit-react.git#master"
+  },
+  "scripts": {
+    "start": "craco start",
+    "lib:start": "rollup -c -w",
+    "lib:build": "rollup -c",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "prerelease": "rollup -c",
+    "release": "git add --force dist && standard-version -a"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.5",
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-image": "^2.0.5",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "eslint-config-airbnb": "18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "4.0.0",
+    "husky": "^4.3.0",
+    "prettier": "^2.1.1",
+    "rollup": "^2.26.9",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.3",
+    "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-url": "^3.0.1",
+    "rollup-plugin-visualizer": "^4.1.1",
+    "standard-version": "^9.0.0"
+  }
+}
