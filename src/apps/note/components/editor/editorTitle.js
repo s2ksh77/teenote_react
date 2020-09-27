@@ -21,7 +21,6 @@ const EditorMenuTitle = () => {
     if (innerText === "수정") {
       PageStore.editStart(PageStore.currentPageData.note_id);
     } else if (innerText === "저장") {
-      // PageStore.noneEdit(PageStore.currentPageData.note_id);
       const updateDTO = {
         dto: {
           note_id: PageStore.currentPageData.note_id,

@@ -1,4 +1,5 @@
 import { observable } from 'mobx';
+import PageStore from './pageStore';
 
 const EditorStore = observable({
   contents: '',
@@ -79,3 +80,12 @@ export const config = {
     openReplaceDialog: 'ctrl+r',
   },
 };
+
+
+export const editorInit =
+{
+  height: 450,
+  menubar: PageStore.isReadMode() ? false : true,
+  toolbar: PageStore.isReadMode() ? false : true,
+  toolbar_mode: 'sliding'
+}
